@@ -1,0 +1,4 @@
+= Spring Fundamentals
+
+A Spring training inspired from Bryan Hansen Pluralsight course "Spring Fundamentals". +
+Mainly explains the Spring Framework (core)
