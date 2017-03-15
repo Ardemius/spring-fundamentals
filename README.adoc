@@ -1,4 +1,9 @@
-= Spring Fundamentals
+= Spring fundamentals
 
-A Spring training inspired from Bryan Hansen Pluralsight course "Spring Fundamentals". +
-Mainly explains the Spring Framework (core)
+A Spring training focusing on the Spring Framework (core) features.
+
+== Ressources
+
+* Bryan Hansen Pluralsight course "Spring Fundamentals"
+
+
