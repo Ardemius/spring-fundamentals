@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="customerRepository"
+		class="com.spring.fundamentals.repository.HibernateCustomerRepositoryImpl" />
+
+	<!-- 5) to prove autowiring by name, we change customerRepository to fee -->
+	<!-- <bean name="foo" class="com.spring.fundamentals.repository.HibernateCustomerRepositoryImpl" 
+		/> -->
+
+	<!-- 1) For Spring setter injection -->
+	<!-- <bean name="customerService" class="com.spring.fundamentals.service.CustomerServiceImpl"> 
+		<property name="customerRepository" ref="customerRepository" /> </bean> -->
+
+
+	<!-- 2) For Spring constructor injection NOTE: constructor injection is 
+		INDEX based, whereas setter injection is NAME based. -->
+	<!-- <bean name="customerService" class="com.spring.fundamentals.service.CustomerServiceImpl"> 
+		<constructor-arg index="0" ref="customerRepository" /> </bean> -->
+
+	<!-- 3) Autowiring by constructor -->
+	<!-- <bean name="customerService" class="com.spring.fundamentals.service.CustomerServiceImpl" 
+		autowire="constructor"> </bean> -->
+
+	<!-- 4) Autowiring by type 
+	When using autowiring by type, it doesn't matter if bean name is customerRepository and
+	its associated setter setFoo. Only the parameter type is taken into account
+	-->
+	<bean name="customerService" class="com.spring.fundamentals.service.CustomerServiceImpl"
+		autowire="byType">
+	</bean>
+
+	<!-- 5) Autowiring by name -->
+	<!-- <bean name="customerService" class="com.spring.fundamentals.service.CustomerServiceImpl"
+		autowire="byName">
+	</bean> -->
+
+</beans>

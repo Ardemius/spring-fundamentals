@@ -28,3 +28,6 @@ hs_err_pid*
 
 # projet target folder 
 target 
+
+# Spring files
+.springBeans
